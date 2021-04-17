@@ -1,0 +1,25 @@
+
+{
+    "users": [
+        {
+            "passportId": 129874515,
+            "cash": 0,
+            "credit": 0,
+            "isActive": false
+        },
+        {
+            "passportId": 569850215,
+            "cash": 0,
+            "credit": 0,
+            "isActive": false
+        },
+        {
+            "passportId": 41034515,
+            "cash": 0,
+            "credit": 0,
+            "isActive": false
+        }
+    ]
+}
+
+
