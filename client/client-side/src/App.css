@@ -1,0 +1,52 @@
+.App {
+  text-align: center;
+}
+
+.users {
+  background-color: rgb(117, 117, 128);
+}
+
+.users ul li {
+  list-style-type: none;
+  padding: 10px 10px;
+}
+
+.homePage {
+  background: url('https://akm-img-a-in.tosshub.com/sites/btmt/images/stories/bank_2_660x450_240120042324_190320034529.jpg') no-repeat center center/cover;
+  height: 100vh;
+  text-align: center;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
+.container {
+  width: 100%;
+  font-size: 24px;
+  background: rgb(70, 69, 80);
+}
+
+.container ul {
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0 auto;
+}
+
+li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar {
+  height: 4rem;
+}
+
+.navbar li {
+  margin-top: 1rem;
+}
