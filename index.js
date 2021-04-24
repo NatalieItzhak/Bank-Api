@@ -11,7 +11,7 @@ app.use(express.json({extends: false}));
 app.use(express.urlencoded({ extended: true }))
 
 
-const URI= `mongodb+srv://NatalieItzhak:natalieitzhak27@cluster0.3ik4f.mongodb.net/test`
+const URI= (process.env.MONGODB_URI ||`mongodb+srv://NatalieItzhak:natalieitzhak27@cluster0.3ik4f.mongodb.net/test`)
 mongoose.connect(URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
