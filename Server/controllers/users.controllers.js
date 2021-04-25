@@ -45,9 +45,9 @@ const addNewUser = async (req, res) => {
     res.status(201).send(addedUser);
 
     if (!user.cash || !user.credit) {
-        res.status(404).json({ msj: 'Please include a cash and credit' });
+        return res.status(404).json({ msj: 'Please include a cash and credit' });
     }
-    res.send(`User with Passport Id number ${user.passportId} added to the database, Cash: ${user.cash}, Credit: ${user.credit}`);
+    return res.send(`User with Passport Id number ${user.passportId} added to the database, Cash: ${user.cash}, Credit: ${user.credit}`);
 }
 
 
@@ -95,19 +95,17 @@ const withdrawMoney = async (req, res) => {
 
 //delete user
 const deleteUserAccount = async (req, res) => {
-    const passportId = req.params.passportId;
-    try {
-        const user = await User.findOneAndDelete({ passportId });
-        if (!user) {
-            return res.status(404).send('user not found');
+        const passportId = req.params.passportId;
+        try {
+            const user = await User.findOneAndDelete({ passportId });
+            if (!user) {
+                return res.status(404).send('user not found');
+            }
+            res.status(200).send(user);
+        } catch (error) {
+            res.status(400).send('not a valid params');
         }
-        else {
-            return res.status(200).json({ success: 'User deleted successfully' });
-        }
-    } catch (error) {
-        res.status(400).send('not a valid params');
-    }
-};
+    };
 
 const transferringMoney = async (req, res) => {
     const { fromUser, toUser, cash } = req.query;

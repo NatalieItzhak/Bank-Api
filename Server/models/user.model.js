@@ -8,7 +8,7 @@ const user = new mongoose.Schema({
 		required: true,
 		unique: true,
 		validate(value) {
-            if (value.length !== 9 || !validator.isInt(value, { allow_leading_zeroes: false })) {
+            if (value.length !== 9 ) {
                 throw new Error('Invalid passport ID!');
             }
         }
@@ -32,7 +32,7 @@ const user = new mongoose.Schema({
 		lowercase: true,
 		validate(value) {
 			if (!validator.isEmail(value)) {
-				throw new Error('unvalid');
+				throw new Error('Unvalid email');
 			}
 		},
 		isActive: {

@@ -11,7 +11,7 @@ router
         controlRoutes.addNewUser(req, res);
     }).put('credit/:passportId', (req, res) => {
         controlRoutes.updateUserCredit(req, res);
-    }).delete('delete/:passportId', (req, res) => {
+    }).delete('/user/:passportId', (req, res) => {
         controlRoutes.deleteUserAccount(req, res);
     }).put('withdraw/:passportId', (req, res) => {
         controlRoutes.withdrawMoney(req, res);
