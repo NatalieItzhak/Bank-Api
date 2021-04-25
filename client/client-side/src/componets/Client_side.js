@@ -15,26 +15,35 @@ const Client_side = () => {
     }, [])
 
     return (
-        <div >
-            {console.log(data)}
-            {data.map((obj) => {
-                return (
-                    <div className='users'>
+       <div className="homePage">
+            <table>
+                <thead>
 
-                        <ul>
-                            <li> Name: {obj.name}</li>
-                            <li>   Email: {obj.email}</li>
-                            <li>  Passport ID: {obj.passportId} </li>
-                            <li>  Cash: {obj.cash} </li>
-                            <li>  Credit: {obj.credit} </li>
-                            {/* <li>  Is Active: {obj.isActive} </li> */}
-                        </ul>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Passport ID:</th>
+                    <th> Cash: </th>
+                    <th>Credit:</th>
 
+                </thead>
+                {console.log(data)}
+                {data.map((obj) => {
+                    return (
 
-                    </div>
-                );
-            })}
+                        <tbody>
+
+                            <td>{obj.name}</td>
+                            <td>{obj.email}</td>
+                            <td>{obj.passportId} </td>
+                            <td>{obj.cash}</td>
+                            <td> {obj.credit}</td>
+
+                        </tbody>
+
+                    );
+                })}   </table>
         </div>
+
     );
 
 }

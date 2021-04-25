@@ -1,18 +1,62 @@
+* {
+  box-sizing: border-box;
+  /* padding: 0;
+  margin: 0; */
+
+}
+
 .App {
   text-align: center;
 }
 
-.users {
-  background-color: rgb(117, 117, 128);
+table {
+  margin-top: 4rem;
 }
 
-.users ul li {
+th {
+  border-left: 2px solid black;
+  color: rgb(5, 4, 4);
+}
+
+td {
+  margin-top: 4rem;
+  padding: 1rem 3rem;
+  font-weight: 400;
+  color: #fff;
+  background-color: gray;
+}
+
+ul {
+  padding: 0;
   list-style-type: none;
-  padding: 10px 10px;
+}
+
+ul li {
+  box-sizing: border-box;
+  width: 15em;
+  height: 1.7em;
+  font-size: 1.8rem;
+  border-radius: 0.5em;
+  margin: 0.5em;
+  box-shadow: 0 0 0.2em rgba(0, 0, 0, 0.2);
+  color: white;
+  text-transform: capitalize;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+ul li:nth-child(odd) {
+  padding-left: 5%;
+  transform: perspective(400px) rotateY(20deg);
+}
+
+ul li:nth-child(odd):hover {
+  transform: perspective(400px) rotateY(20deg);
+  padding-left: 5%;
 }
 
 .homePage {
-  background: url('https://akm-img-a-in.tosshub.com/sites/btmt/images/stories/bank_2_660x450_240120042324_190320034529.jpg') no-repeat center center/cover;
+  background: url('../src/floriane-vita-FyD3OWBuXnY-unsplash.jpg') no-repeat center center/cover;
   height: 100vh;
   text-align: center;
   font-size: 2.5rem;
@@ -21,11 +65,13 @@
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-
+.btnCont {
+  align-content: center;
+}
 
 .container {
   width: 100%;
-  font-size: 24px;
+  font-size: 12rem;
   background: rgb(70, 69, 80);
 }
 
@@ -47,6 +93,23 @@ li a {
   height: 4rem;
 }
 
-.navbar li {
-  margin-top: 1rem;
+.navbar li :hover {
+  color: rgb(46, 167, 189);
+  transition: all 200ms ease-in-out;
+}
+
+button {
+  width: 10rem;
+  height: 5rem;
+  background-color: gray;
+  color: #fff;
+  border-radius: 50px;
+  font-size: 1.5rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  display: table-cell;
+  margin-left: 2rem;
+}
+.btnCont{
+  margin-top: 12rem; 
+  margin-left: -39rem;
 }
