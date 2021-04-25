@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, BrowserRouter } from 'react-router-dom'
 import HomePage from './componets/Home'
 import Navbar from './componets/Navbar';
 import Actions from './componets/Actions';
+import NewAccount from './componets/NewAccount';
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
             </Route>
             <Route exact path="/users">
               <Client_side />
+            </Route>
+            <Route exact path="/new-account">
+              <NewAccount/>
             </Route>
             <Route exact path="/actions">
               <Actions />
